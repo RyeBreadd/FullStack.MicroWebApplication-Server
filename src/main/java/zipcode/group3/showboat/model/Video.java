@@ -1,6 +1,7 @@
 package zipcode.group3.showboat.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,6 +19,7 @@ public class Video {
     private String filePath;
     private String dateCreated;
     private String description;
+    private Long userId;
 
     public Video() { }
 
@@ -59,5 +61,13 @@ public class Video {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 }

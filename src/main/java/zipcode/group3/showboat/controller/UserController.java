@@ -30,7 +30,7 @@ public class UserController {
      * @param id - the primary key of the user as a path
      * @return a user matching that id
      */
-    @RequestMapping(value = "user/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
     public User get(@PathVariable Long id) {
         return userRepository.getOne(id);
     }
@@ -39,7 +39,7 @@ public class UserController {
      * Creates a new video from a json object
      * @param user - a user created from a json object in the Body of the request
      */
-    @PutMapping("user")
+    @PutMapping("/user")
     @ResponseStatus(HttpStatus.OK)
     public void create(@RequestBody User user) {
         userRepository.save(user);
