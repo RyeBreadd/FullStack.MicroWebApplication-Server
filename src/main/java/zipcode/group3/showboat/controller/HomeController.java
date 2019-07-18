@@ -13,10 +13,8 @@ import java.net.URISyntaxException;
 public class HomeController {
 
     @GetMapping
-    public RedirectView ping()
+    public String ping()
     {
-        RedirectView redirectView = new RedirectView();
-        redirectView.setUrl("https://http.cat/200");
-        return redirectView;
+       return "redirect:https://http.cat/200";
     }
 }
