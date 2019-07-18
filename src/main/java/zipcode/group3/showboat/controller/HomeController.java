@@ -1,5 +1,7 @@
 package zipcode.group3.showboat.controller;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,9 +16,7 @@ import java.net.URISyntaxException;
 public class HomeController {
 
     @GetMapping
-    public RedirectView ping(RedirectAttributes attributes) {
-        attributes.addFlashAttribute("flashAttribute", "redirectWithRedirectView");
-        attributes.addAttribute("attribute", "redirectWithRedirectView");
-        return new RedirectView("https://http.cat/200");
+    public ResponseEntity ping() {
+      return ResponseEntity.ok(HttpStatus.OK);
     }
 }
