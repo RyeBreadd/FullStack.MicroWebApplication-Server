@@ -1,9 +1,6 @@
 package zipcode.group3.showboat.model;
 
-
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import javafx.scene.input.DataFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
